@@ -1,20 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const neuePlak = localFont({
+  src: [
+    { path: "../../public/assets/fonts/neue-plak/neue-plak-regular.woff2", weight: "400", style: "normal" },
+    { path: "../../public/assets/fonts/neue-plak/neue-plak-semibold.woff2", weight: "600", style: "normal" },
+    { path: "../../public/assets/fonts/neue-plak/neue-plak-bold.woff2", weight: "700", style: "normal" },
+    { path: "../../public/assets/fonts/neue-plak/neue-plak-extrablack.woff2", weight: "800", style: "normal" },
+  ],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Website Clone",
-  description: "Pixel-perfect website clone",
+  title: "Lucas Resells — The Inner Circle",
+  description: "Join the waitlist for exclusive access to Lucas Resells' Inner Circle mentorship program.",
+  openGraph: {
+    title: "Lucas Resells — The Inner Circle",
+    description: "Join the waitlist for exclusive access to Lucas Resells' Inner Circle mentorship program.",
+    siteName: "Lucas Resells",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -23,11 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className={`${neuePlak.className} h-full antialiased`}>
+      <body className="min-h-full bg-black text-white">{children}</body>
     </html>
   );
 }
