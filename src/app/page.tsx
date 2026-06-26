@@ -15,9 +15,9 @@ export default function Home() {
         aria-hidden="true"
       >
         <Grainient
-          color1="#616161"
-          color2="#a9a9a9"
-          color3="#353535"
+          color1="#040404"
+          color2="#6e6e6e"
+          color3="#171717"
           timeSpeed={0.7}
           colorBalance={-0.01}
           warpStrength={4}
