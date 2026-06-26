@@ -3,7 +3,7 @@ import { WaitlistForm } from "@/components/WaitlistForm";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { WinsSection } from "@/components/WinsSection";
 import { CtaButton } from "@/components/CtaButton";
-import Beams from "@/components/Beams";
+import Grainient from "@/components/Grainient";
 import { ExternalLink } from "lucide-react";
 
 export default function Home() {
@@ -14,15 +14,29 @@ export default function Home() {
         style={{ zIndex: 0 }}
         aria-hidden="true"
       >
-        <Beams
-          beamWidth={3}
-          beamHeight={30}
-          beamNumber={20}
-          lightColor="#ffffff"
-          speed={2}
-          noiseIntensity={1.75}
-          scale={0.17}
-          rotation={30}
+        <Grainient
+          color1="#616161"
+          color2="#a9a9a9"
+          color3="#353535"
+          timeSpeed={0.7}
+          colorBalance={-0.01}
+          warpStrength={4}
+          warpFrequency={5.6}
+          warpSpeed={1.5}
+          warpAmplitude={55}
+          blendAngle={156}
+          blendSoftness={0.34}
+          rotationAmount={500}
+          noiseScale={2}
+          grainAmount={0.1}
+          grainScale={2}
+          grainAnimated={false}
+          contrast={1.5}
+          gamma={1}
+          saturation={1}
+          centerX={0}
+          centerY={0}
+          zoom={0.9}
         />
       </div>
 
